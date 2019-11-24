@@ -218,7 +218,7 @@ add_action( 'after_setup_theme', 'twentynineteen_content_width', 0 );
  */
 function twentynineteen_scripts() {
 	wp_enqueue_style( 'twentynineteen-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
-
+	
 	wp_style_add_data( 'twentynineteen-style', 'rtl', 'replace' );
 
 	if ( has_nav_menu( 'menu-1' ) ) {
@@ -231,6 +231,12 @@ function twentynineteen_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	
+	wp_enqueue_style( 'bootstrap', get_stylesheet_directory_uri() . '/bootstrap/css/bootstrap.min.css' );
+	
+	wp_enqueue_script( 'bootstrap', get_stylesheet_directory_uri() . '/bootstrap/js/bootstrap.min.js' );
+	
+	wp_enqueue_style( 'fontawasome', get_stylesheet_directory_uri() . '/fontawesome/css/all.css' );
 }
 add_action( 'wp_enqueue_scripts', 'twentynineteen_scripts' );
 

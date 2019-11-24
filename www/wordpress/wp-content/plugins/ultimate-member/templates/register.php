@@ -7,7 +7,6 @@
 		<form method="post" action="">
 
 			<?php
-			
 			/**
 			 * UM hook
 			 *
@@ -132,10 +131,8 @@
 			 * }
 			 * ?>
 			 */
-			do_action( "um_after_form", $args ); 
-			?>
-			
-			
+			do_action( "um_after_form", $args ); ?>
+		
 		</form>
 
 	</div>
